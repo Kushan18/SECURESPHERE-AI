@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/venv
+    environment:
+      - GEMINI_API_KEY=AQ.Ab8RN6IPyGdxfvOUi0Kc3x3HXQSdFFK0WQFTYHk4K5nV4X86ew
+      - MONGODB_URL=mongodb+srv://securesphere:ezGA0jRAxg5tJkys@securesphere.465gpxo.mongodb.net/?appName=securesphere
+      - JWT_SECRET=securesphere_super_secret_key_2024
+      - DATABASE_NAME=securesphere
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
