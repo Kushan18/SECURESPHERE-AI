@@ -1,0 +1,22 @@
+# Combined .gitignore for SecureSphere AI (Node + Python + Docker)
+# Node.js
+node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.env
+venv/
+# IDEs
+.idea/
+.vscode/
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+# OS files
+Thumbs.db
+.DS_Store
