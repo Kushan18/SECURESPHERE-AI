@@ -14,9 +14,10 @@ venv/
 .idea/
 .vscode/
 # Docker
-Dockerfile
+/Dockerfile
 docker-compose.yml
 .dockerignore
+!scanner/Dockerfile
 # OS files
 Thumbs.db
 .DS_Store
